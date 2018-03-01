@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox alignment="CENTER" spacing="10.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bsu.cs345.project1.Controller">
+   <children>
+      <Label text="Triage grading Calculator" />
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="7.0">
+         <children>
+            <Label text="Input grade here" />
+            <TextArea prefHeight="200.0" prefWidth="200.0" />
+         </children>
+      </HBox>
+      <Button mnemonicParsing="false" onAction="#CalculateGrade" text="Calculate">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</VBox>
