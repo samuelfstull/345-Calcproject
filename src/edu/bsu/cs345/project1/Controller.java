@@ -21,7 +21,7 @@ public class Controller {
             text.replaceAll("\\s","");
            String[] eachAssign = text.split(",");
            //Integer.parseInt(myString)
-        
+
         outputfield.setText(finalText);
     }
 
