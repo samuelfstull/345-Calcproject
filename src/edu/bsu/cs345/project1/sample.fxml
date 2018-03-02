@@ -4,27 +4,46 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" spacing="10.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bsu.cs345.project1.Controller">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="400.0" spacing="10.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bsu.cs345.project1.Controller">
 
-      <Label text="Triage grading Calculator" />
-      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+      <Label text="Triage grading Calculator" textAlignment="JUSTIFY" textOverrun="CLIP" underline="true" wrapText="true">
+      <font>
+         <Font name="Arial Black" size="20.0" />
+      </font></Label>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="7.0">
 
-            <Label text="Input Grades Here" />
-            <TextField fx:id="gradefield" alignment="CENTER" onAction="#CalculateGrade" promptText="Input grades here" />
+            <Label text="Input Grades Here" textFill="#030303">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font></Label>
+      <Label text="Put only the grade out of 3 and separate them by commas" />
+            <TextField fx:id="gradefield" alignment="CENTER" maxHeight="30.0" maxWidth="200.0" minHeight="30.0" minWidth="200.0" onAction="#CalculateGrade" prefHeight="30.0" prefWidth="200.0" promptText="3,2,3,1,2,3" />
+         <Button mnemonicParsing="false" onAction="#CalculateGrade" text="Calculate">
+            <font>
+               <Font name="Arial Black" size="12.0" />
+            </font>
+         </Button>
+      <effect>
+         <InnerShadow />
+      </effect>
 
       </VBox>
-      <Button mnemonicParsing="false" onAction="#CalculateGrade" text="Calculate">
-         <font>
-            <Font name="System Italic" size="12.0" />
-         </font>
-      </Button>
-   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
-      <children>
-         <Label text="Output" />
-         <TextArea fx:id="outputfield" editable="false" prefHeight="200.0" prefWidth="200.0" />
-      </children>
+   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+         <Label text="Output">
+            <font>
+               <Font name="Arial Black" size="12.0" />
+            </font></Label>
+         <TextArea fx:id="outputfield" editable="false" maxHeight="99.0" maxWidth="99.0" minHeight="99.0" minWidth="99.0" prefHeight="99.0" prefWidth="99.0">
+            <font>
+               <Font name="Cambria Italic" size="30.0" />
+            </font>
+            <effect>
+               <InnerShadow />
+            </effect></TextArea>
+         <VBox prefHeight="200.0" prefWidth="100.0" />
    </VBox>
 </VBox>
